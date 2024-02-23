@@ -1,5 +1,6 @@
 # CV LUXURY HOMES
 
+![Alt Text](https://github.com/CV2Tre/CV-Luxury-Homes/blob/main/ss.png)
 Welcome to CV Luxury Homes - your ultimate destination for booking appointments to view luxurious properties!
 
 ## Overview
@@ -30,7 +31,8 @@ CV Luxury Homes is a cutting-edge CRUD application that revolutionizes the way y
 
 ## Contributors
 
-- [Your Name](https://github.com/yourusername)
+- [Clora Vernon](https://github.com/CV2Tre)
+
 
 ## Support
 
@@ -39,3 +41,5 @@ For any inquiries or support, please contact [support@cvluxuryhomes.com](mailto:
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+
