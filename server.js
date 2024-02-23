@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
     }
 });
 
-app.get('/properties/:id', async (req, res) => {
+app.get('/:id', async (req, res) => {
     try {
         const home = await Home.findById(req.params.id).exec();
         if (!home) {

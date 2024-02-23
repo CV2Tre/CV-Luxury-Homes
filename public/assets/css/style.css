@@ -1104,7 +1104,7 @@ a:hover {
 
 /*------/ Intro Single /------*/
 .intro-single {
-  padding: 2rem 0 3rem;
+  padding: 5rem 0 3rem;
 }
 
 @media (max-width: 767px) {
