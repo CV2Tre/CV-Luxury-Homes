@@ -1104,7 +1104,7 @@ a:hover {
 
 /*------/ Intro Single /------*/
 .intro-single {
-  padding: 12rem 0 3rem;
+  padding: 2rem 0 3rem;
 }
 
 @media (max-width: 767px) {
@@ -2154,4 +2154,22 @@ footer .copyright-footer {
 
 footer .credits {
   font-size: 14px;
+}
+
+
+.image-parent {
+  width: 300px; /* Adjust the width of the parent container */
+  height: 400px; /* Adjust the height of the parent container */
+  overflow: hidden; /* Hide any overflow content */
+  position: relative; /* Ensure relative positioning for absolute positioning of the image */
+}
+
+.image-parent img {
+  width: 100%; /* Set the width of the image to fill the parent container */
+  height: auto; /* Let the browser calculate the height to maintain aspect ratio */
+  display: block; /* Ensure the image behaves as a block-level element */
+  position: absolute; /* Position the image absolutely within the parent container */
+  /*top: 50%; /* Move the image down by 50% of the parent container's height */
+  /*left: 50%; /* Move the image right by 50% of the parent container's width */
+  /*transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
 }

@@ -7,7 +7,8 @@ const Home = new Schema(
         houseAddress: { type: Object, default: {} },
         aboutTheHome: { type: String, required: true },
         agentId: { type: Schema.Types.ObjectId, required: false },
-        homeImgPathURL: { type: String, required: true }
+        homeImgPathURL: { type: String, required: true },
+        price: { type: String, required: true }
     },
     { timestamps: true }
 );
