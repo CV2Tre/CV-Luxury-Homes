@@ -8,24 +8,33 @@ const main = async () => {
     try {
         const agents = [
             {
-                name: 'Agent 1',
-                address: 'Address 1',
-                email: 'agent1@example.com',
-                phone: '1234567890'
+                name: "Emily Johnson",
+                address: "123 Main St, Los Angeles, CA",
+                email: "emily.johnson@cvluxuryhomes.com",
+                phone: "323-555-1234",
+                headshotImgPath: "/path/to/emily_johnson.jpg",
+                properties: []
             },
             {
-                name: 'Agent 2',
-                address: 'Address 2',
-                email: 'agent2@example.com',
-                phone: '9876543210'
+                name: "Michael Rodriguez",
+                address: "456 Elm St, Brooklyn, NY",
+                email: "michael.rodriguez@cvluxuryhomes.com",
+                phone: "718-555-5678",
+                headshotImgPath: "/path/to/michael_rodriguez.jpg",
+                properties: []
             },
             {
-                name: 'Agent 3',
-                address: 'Address 3',
-                email: 'agent3@example.com',
-                phone: '5551234567'
-            }
+                name: "Sophia Martinez",
+                address: "789 Oak St, Queens, NY",
+                email: "sophia.martinez@cvluxuryhomes.com",
+                phone: "718-555-9012",
+                headshotImgPath: "/path/to/sophia_martinez.jpg",
+                properties: []
+            },
+            // Add more agents as needed
         ];
+
+
 
         const createdAgents = await Agent.insertMany(agents);
         console.log('Created agents:', createdAgents);

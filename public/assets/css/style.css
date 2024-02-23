@@ -1208,7 +1208,7 @@ a:hover {
 
   .card-box-a .price-a,
   .card-box-b .price-a {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -2172,4 +2172,9 @@ footer .credits {
   /*top: 50%; /* Move the image down by 50% of the parent container's height */
   /*left: 50%; /* Move the image right by 50% of the parent container's width */
   /*transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
+}
+
+
+.contact-form .form-group {
+  margin-bottom: 15px; /* Adjust this value to set the desired space */
 }

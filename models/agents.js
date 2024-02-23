@@ -8,7 +8,8 @@ const Agent = new Schema(
         email: { type: String, required: true },
         phone: { type: String, required: true },
         headshotImgPath: { type: String, required: false, default: "" },
-        properties: { type: Array, required: false, default: [] }
+        properties: { type: Array, required: false, default: [] },
+        bio: { type: String }
     },
     { timestamps: true }
 );

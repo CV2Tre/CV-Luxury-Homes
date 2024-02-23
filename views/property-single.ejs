@@ -121,19 +121,16 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">CV<span class="color-b">Luxury Homes</span></a>
+      <a class="navbar-brand text-brand" href="/">CV<span class="color-b">Luxury Homes</span></a>
 
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
 
-          <li class="nav-item">
-            <a class="nav-link " href="index.html">Home</a>
-          </li>
-
+         
        
 
           <li class="nav-item">
-            <a class="nav-link " href="property-grid.html">Property</a>
+            <a class="nav-link " href="/">View More Properties</a>
           </li>
 
        
@@ -165,7 +162,7 @@
             <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                  <a href="index.html">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li class="breadcrumb-item">
                   <a href="property-grid.html">Properties</a>
@@ -226,93 +223,179 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-6 col-lg-4">
-                <img src="assets/img/agent-4.jpg" alt="" class="img-fluid">
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="property-agent">
-                  <h4 class="title-agent">Anabella Geller</h4>
-                  <p class="color-text-a">
-                    
-                    Anabella Geller is a seasoned real estate professional with a passion for helping clients achieve their property goals. With an extensive background in the real estate industry spanning over 15 years, Anabella has honed her skills in negotiation, marketing, and customer service, making her a trusted advisor in the competitive world of real estate.
-                  </p>
-                  <ul class="list-unstyled">
-                    <li class="d-flex justify-content-between">
-                      <strong>Phone:</strong>
-                      <span class="color-text-a">(222) 4568932</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                      <strong>Mobile:</strong>
-                      <span class="color-text-a">777 287 378 737</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                      <strong>Email:</strong>
-                      <span class="color-text-a">annabella@example.com</span>
-                    </li>
-                    <li class="d-flex justify-content-between">
-                        <strong>Date:</strong>
-                        <span class="color-text-a">annabella@example.com</span>
-                      </li>
-                    <li class="d-flex justify-content-between">
-                      <strong>Skype:</strong>
-                      <span class="color-text-a">Annabela.ge</span>
-                    </li>
-                  </ul>
-                  <div class="socials-a">
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <a href="#">
-                          <i class="bi bi-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#">
-                          <i class="bi bi-instagram" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#">
-                          <i class="bi bi-linkedin" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-4">
-                <div class="property-contact">
-                  <form class="form-a">
-                    <div class="row">
-                      <div class="col-md-12 mb-1">
-                        <div class="form-group">
-                          <input type="text" class="form-control form-control-lg form-control-a" id="inputName" placeholder="Name *" required>
+            
+
+    <!-- ======= Agent Single ======= -->
+ <!-- ======= Agent Single ======= -->
+<section class="agent-single">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="agent-avatar-box">
+                            <img src="<%= agent.headshotImgPath %>" alt="<%= agent.name %>'s headshot" class="agent-avatar img-fluid">
                         </div>
-                      </div>
-                      <div class="col-md-12 mb-1">
-                        <div class="form-group">
-                          <input type="email" class="form-control form-control-lg form-control-a" id="inputEmail1" placeholder="Email *" required>
-                        </div>
-                      </div>
-                      <div class="col-md-12 mb-1">
-                        <div class="form-group">
-                          <textarea id="textMessage" class="form-control" placeholder="Comment *" name="message" cols="45" rows="8" required></textarea>
-                        </div>
-                      </div>
-                      <div class="col-md-12 mt-3">
-                        <button type="submit" class="btn btn-a">Send Message</button>
-                      </div>
                     </div>
-                  </form>
+                    <div class="col-md-5 section-md-t3">
+                        <div class="agent-info-box">
+                            <div class="agent-title">
+                                <div class="title-box-d">
+                                    <h3 class="title-d"><%= agent.name %></h3>
+                                </div>
+                            </div>
+                            <div class="agent-content mb-3">
+                                <p class="content-d color-text-a">
+                                    <%= agent.bio %>
+                                </p>
+                                <div class="info-agents color-a">
+                                    <p>
+                                        <strong>Phone: </strong>
+                                        <span class="color-text-a"><%= agent.phone %></span>
+                                    </p>
+                                    <p>
+                                        <strong>Email: </strong>
+                                        <span class="color-text-a"><%= agent.email %></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="socials-footer">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="#" class="link-one">
+                                            <i class="bi bi-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="link-one">
+                                            <i class="bi bi-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="link-one">
+                                            <i class="bi bi-instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="link-one">
+                                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+           
+            <div class="row property-grid grid">
+                <% agent.properties.forEach(property => { %>
+                <div class="col-md-4">
+                    <div class="card-box-a card-shadow">
+                        <div class="img-box-a">
+                            <img src="<%= property.image %>" alt="<%= property.name %>" class="img-a img-fluid">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="card-overlay-a-content">
+                                <div class="card-header-a">
+                                    <h2 class="card-title-a">
+                                        <a href="#"><%= property.name %></a>
+                                    </h2>
+                                </div>
+                                <div class="card-body-a">
+                                    <div class="price-box d-flex">
+                                        <span class="price-a"><%= property.type %> | $ <%= property.price %></span>
+                                    </div>
+                                    <a href="#" class="link-a">Click here to view
+                                        <span class="bi bi-chevron-right"></span>
+                                    </a>
+                                </div>
+                                <div class="card-footer-a">
+                                    <ul class="card-info d-flex justify-content-around">
+                                        <li>
+                                            <h4 class="card-info-title">Area</h4>
+                                            <span><%= property.area %>m<sup>2</sup></span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Beds</h4>
+                                            <span><%= property.beds %></span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Baths</h4>
+                                            <span><%= property.baths %></span>
+                                        </li>
+                                        <li>
+                                            <h4 class="card-info-title">Garages</h4>
+                                            <span><%= property.garages %></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
         </div>
-      </div>
+    </div>
+</section><!-- End Agent Single -->
+<!-- ======= Agent Single ======= -->
+<section class="agent-single">
+    <!-- Your existing agent information block -->
+</section><!-- End Agent Single -->
 
-
-  
+<!-- Form Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="contact-form-section">
+                   <center><h2 class="contact-title" style="color:red"> Ready to Tour This Home?</h2><br><h3>Fill out the form below to tour this home with <%= agent.name %>!</h3></center> 
+                   <span>
+                    <div class="contact-form">
+                        <form id="contactForm" class="contactForm" onsubmit="submitForm(); return false;">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="date" class="form-control" id="date" name="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="notes" name="notes" rows="4" placeholder="Notes"></textarea>
+                            
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<h2 id="agentId" style="display:none"><%= agentId %></h2>
+  <h2 id="homeId"style="display:none"><%= homeId %></h2>
 
   </main><!-- End #main -->
 
@@ -388,7 +471,7 @@
           <nav class="nav-footer">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#">Home</a>
+                <a href="#">/</a>
               </li>
               <li class="list-inline-item">
                 <a href="#">Property</a>
@@ -423,14 +506,7 @@
               <span class="color-a">CV Luxury Homes</span> All Rights Reserved.
             </p>
           </div>
-          <div class="credits">
-            <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=CV Luxury Homes
-          -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        
           </div>
         </div>
       </div>
@@ -444,8 +520,56 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+<script>
+    function submitForm() {
+    // Get form data
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const date = document.getElementById('date').value;
+    const notes = document.getElementById('notes').value;
+    const agentId = document.getElementById('agentId').textContent;
 
-  <!-- Template Main JS File -->
+
+    const homeId = document.getElementById('homeId').textContent;
+    
+    // Create form data object
+    const formData = {
+        name: name,
+        phone: phone,
+        email: email,
+        date: date,
+        notes: notes,
+        agentId: agentId,
+        homeId: homeId
+    };
+
+    // Make API request to post form data
+    fetch('/appointments/new', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (response.ok) {
+            // Display success message
+            alert('Data saved successfully!');
+            // You can also redirect to another page or perform any other action here
+        } else {
+            // Display error message
+            alert('Failed to save data. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Display error message
+        alert('An error occurred. Please try again later.');
+    });
+}
+
+</script>  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
