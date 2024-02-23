@@ -1,21 +1,50 @@
 const express = require('express');
+const path = require('path');
+
 const mongoose = require('mongoose');
 const agentController = require('./controllers/agentController');
 const homeController = require('./controllers/homeController');
 const customerController = require('./controllers/customerController');
 const appointmentController = require('./controllers/appointmentController');
+const Home = require('./models/homes');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 
+// Set the view engine to ejs
+app.set('view engine', 'ejs');
 
-// Middleware
+// Set the directory where the view files are located
+app.set('views', path.join(__dirname, 'views'));
+
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.json());
 
 // Routes
-app.get('/', (req, res) => res.send('Hello World'));
+app.get('/', (req, res) => {
+    try {
+        const homes = [];
+        Home.find({})
+            .then(homes => {
+                // Process found homes
+                // Storing the result in a variable named constHomes
+                console.log('Found homes:', homes);
+                res.render('index', { title: 'CV Luxury Homes', homes: homes });
 
+            })
+            .catch(err => {
+                console.error('Error finding homes:', err);
+                // Handle error
+            });
+    } catch (error) {
+
+        console.error(error)
+        res.status(500).json({ message: "Server Error!" })
+    }
+});
 // Agents
 app.get('/agents', agentController.getAllAgents);
 app.get('/agents/:id', agentController.getAgentById);

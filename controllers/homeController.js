@@ -1,4 +1,4 @@
-const Home = require('../models/Home');
+const Home = require('../models/homes');
 
 const getAllHomes = async (req, res) => {
     try {

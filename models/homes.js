@@ -6,7 +6,8 @@ const Home = new Schema(
         houseInformation: { type: String, required: true },
         houseAddress: { type: Object, default: {} },
         aboutTheHome: { type: String, required: true },
-        agentId: { type: Schema.Types.ObjectId, required: false }
+        agentId: { type: Schema.Types.ObjectId, required: false },
+        homeImgPathURL: { type: String, required: true }
     },
     { timestamps: true }
 );
