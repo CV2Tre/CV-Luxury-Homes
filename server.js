@@ -45,6 +45,19 @@ app.get('/', (req, res) => {
         res.status(500).json({ message: "Server Error!" })
     }
 });
+
+app.get('/properties/:id', async (req, res) => {
+    try {
+        const home = await Home.findById(req.params.id).exec();
+        if (!home) {
+            return res.status(404).send('Home not found');
+        }
+        res.render('property-single', { title: 'Single Property', home: home });
+    } catch (err) {
+        console.error('Error finding home:', err);
+        res.status(500).send('Server Error');
+    }
+});
 // Agents
 app.get('/agents', agentController.getAllAgents);
 app.get('/agents/:id', agentController.getAgentById);
